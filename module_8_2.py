@@ -3,13 +3,11 @@ def personal_sun(numbers):
     incorrect_data = 0
     for num in numbers:
         try:
-
             result += num
 
 
         except TypeError:
             incorrect_data += 1
-
             print(f'Некорректный тип данных для подсчёта суммы - {num}')
 
     return result, incorrect_data
@@ -17,7 +15,6 @@ def personal_sun(numbers):
 
 def calculate_average(numbers):
     try:
-
         total = personal_sun(numbers)
         return total[0] / (len(numbers) - total[1])
 
@@ -26,7 +23,6 @@ def calculate_average(numbers):
         return 0
 
     except TypeError:
-
         return ('В numbers записан некорректный тип данных')
     
 
